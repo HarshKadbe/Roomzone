@@ -92,7 +92,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'roomzone',
         'USER': 'postgres',
-        'PASSWORD': 'Harsh@0105',
+        'PASSWORD': os.environ.get('DB_host_pass_romezone'),
         'PORT':'5432',
     }
 }
@@ -136,7 +136,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'zonesroom@gmail.com'
-EMAIL_HOST_PASSWORD = 'rzpyxiwzuuafulzz'
+EMAIL_HOST_PASSWORD = os.environ.get('email_host_pass_rommzone')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
