@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/StylePDescription.css' %}">
+    
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+    
+    <br>
+    <div class="container">
+        <div class="ProductImage">
+            <div class="img-box">
+                <img src="{{productObj.imageURL}}" alt="">
+            </div>
+        </div>
+        
+        
+        <!--- product information -->
+        <div class="PInfo">
+            <div class="P-name">
+                <h1>{{productObj.property_name}}</h1>
+                </br>
+                    <h2>{{productObj.category.name}} Flat Available at {{productObj.property_location}} <p></p></h2>
+                </br>
+                <div class="price">
+                    <h1 style="color: rgb(76, 76, 230);"> ₹{{productObj.Rent}}</h1>
+                </div>
+            </div>
+            <br><hr>
+            <div class="PHighlight">
+                <h1>Services</h1>
+                <div class="grid">
+                    <div class="d1">
+                        <P >Flate</P>
+                        <h2 >{{productObj.category.name}}</h2>
+                    </div>
+                    <div class="d1">
+                        <p>By</p>
+                        <h2>{{productObj.by}}</h2>
+                    </div>
+                    <div class="d1">
+                        <p>city</p>
+                        <h2>{{productObj.property_location}}</h2>
+                    </div>
+                    <div class="d1">
+                        <P>Wifi Available</P>
+                        <h2>Available</h2>
+                    </div>
+                    <div class="d1">
+                        <p>Furnish Type</p>
+                        <h2>{{productObj.furnished}}</h2>
+                    </div>
+                    <div class="d1">
+                        <p>Balcony</p>
+                        <h2>{{productObj.balcony}}</h2>
+                    </div>
+                </div>
+                <div class="cont-box">
+                    <div class="contact">
+                        <h2> contact us to book this Flate : {{productObj.contact_detail}} </h2>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+       
+    </div>
+    <!-- <div class="location">
+        <main>
+            <section id="address">
+              <h2>Address</h2>
+              <p>123 Main Street</p>
+              <p>Anytown, USA 12345</p>
+            </section>
+            <section id="location">
+              <h2>Location</h2>
+              <p>The villa is located in the beautiful countryside of Anytown, surrounded by lush greenery and stunning views. It's situated just a short drive away from the city center, where you can find a wide range of shops, restaurants, and entertainment options.</p>
+              <p>The nearest airport is Anytown International Airport, which is located just 30 minutes away by car. There are also several public transportation options available, including buses and trains that run regularly to and from the city center.</p>
+              <p>There are many popular tourist attractions located near the villa, including hiking trails, parks, and historical landmarks. You can also enjoy a variety of outdoor activities such as fishing, golfing, and horseback riding in the surrounding area.</p>
+            </section>
+          </main>
+    </div> -->
+    <!-- -all details -->
+    <div class="box2">
+        <div class="more-details">
+            <div class="All-details">
+                <h1>More Details: </h1>
+                <section>
+                    <!-- <ul>
+                        
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                        <li><span>Number of Bedrooms:</span> <span id="bedrooms">Design By Harsh Kadbe</span></li>
+                    </ul> -->
+                    <ul>
+                        <li><span class="static">Name of the Owner:</span> <span id="bedrooms" class="dynamic">{{productObj.profile.name}}</span></li>
+                        <li><span class="static">Rental Value:</span> <span id="bedrooms" class="dynamic">₹{{productObj.Rent}}</span></li>
+                        <li><span class="static">Security Deposit:</span> <span id="bedrooms" class="dynamic">₹{{productObj.security_deposit}}</span></li>
+                        <li><span class="static">Address:</span> <span id="bedrooms" class="dynamic">{{productObj.description}}</span></li>
+                        <li><span class="static">Parking:</span> <span id="bedrooms" class="dynamic">{{productObj.parking}}</span></li>
+                        <li><span class="static">Number of Bedroom:</span> <span id="bedrooms" class="dynamic">{{productObj.no_of_bedroom}}</span></li>
+                        <li><span class="static">Number of Hall:</span> <span id="bedrooms" class="dynamic">{{productObj.no_of_hall}}</span></li>
+                        <li><span class="static">Number of Kitchen:</span> <span id="bedrooms" class="dynamic">{{productObj.no_of_kitchen}}</span></li>
+                        <li><span class="static">Number of Bathroom:</span> <span id="bedrooms" class="dynamic">{{productObj.no_of_bathroom}}</span></li>
+                        <li><span class="static">Independent:</span> <span id="bedrooms" class="dynamic">{{productObj.independent}}</span></li>
+                        <li><span class="static">Bachler's Allowed:</span> <span id="bedrooms" class="dynamic">{{productObj.bachelers_allowed}}</span></li>
+                        
+                        
+                        <!-- <li>Number of Bathrooms: <span id="bathrooms">Design By Harsh Kadbe</span></li>
+                        <li>Balcony Available: <span id="balcony">Design By Harsh Kadbe</span></li>
+                        <li>Rental Value: <span id="rent">Design By Harsh Kadbe</span></li>
+                        <li>Security deposite: <span id="rent">Design By Harsh Kadbe</span></li>
+                        <li>total amount: <span id="rent">Design By Harsh Kadbe</span></li>
+                        <li>btchlors allouwd: <span id="rent">Design By Harsh Kadbe</span></li>
+                        <li>Parcking: <span id="rent"></span>Design By Harsh Kadbe</li>
+                        <li>Air Conditioner: <span id="rent">Design By Harsh Kadbe</span></li>
+                        <li>Free WIFI: <span id="rent">Design By Harsh Kadbe</span></li>
+                        <li>Rental Value: <span id="rent">Design By Harsh Kadbe</span></li>
+                        <li>Furnished: <span id="furnished">Design By Harsh Kadbe</span></li>
+                        <li>Description: <span id="description">Design By Harsh Kadbe Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique sit ullam accusantium eaque explicabo illum ut delectus cum nostrum, deleniti debitis repudiandae ab dolorum quo esse eos ipsum porro nulla?</span></li>
+                        <li>Features:
+                            <ul id="features"></ul>
+                        </li> -->
+
+
+                        <!-- border-radius: 10px;
+                        margin: 7px 10%;
+                        font-size: 20px;
+                        color: gray;
+                        background-color: #f6f8ff;
+                        height: 44px;
+                        padding-left: 63px;
+                        display: flex;
+                        /* box-shadow: rgb(194 194 217 / 21%) 0px 30px 60px -12px inset, rgb(179 161 161 / 15%) 0px 18px 36px -18px inset; */
+                        justify-content: space-around; -->
+
+                    </ul>
+                    <!-- <button >get contact deatils</button> -->
+                </section>           
+            </div>
+            
+        </div>
+        <!-- <div class="contact">
+            <h1>Contact us to book the</h1>
+        </div> -->
+    </div>
+    
+    
+    <!--footter -->
+<footer>
+    <p>&copy; 2023 Sample Footer. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+
+</footer>
+</body>
+</html>

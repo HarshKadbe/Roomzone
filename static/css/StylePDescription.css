@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: gainsboro;
+}
+
+/* -------------------------------Navigation bar-------- */
+.navbar{
+    scroll-behavior:smooth;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:20px 7%;
+    background-color: gray;
+    position:sticky;
+    top: 0%;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 4px;
+    z-index: 1;
+    
+}
+.logo{
+    width: 140px;
+    cursor: pointer; 
+}
+.nav_links{
+    background: transparent;
+}
+.nav_links li{
+    display: inline-block;
+    margin: 10px 30px;
+    list-style: none;
+   
+}
+.nav_links li a{
+    text-decoration: none;
+    color: white;
+}
+.registre_btn{
+    background: white;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+/* -------------------------------container=1 product information---------------------- */
+.container{
+    display: flex;
+    overflow: hidden;
+    padding: 20px;
+    background: white;
+    border: 2px solid gray;
+    border-radius: 22px 64px;
+    margin: 20px 3% 2% 3%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    justify-content: space-around;
+    
+}
+
+/* -----------------------------Probuct photo */
+.ProductImage{
+    background-color: rgb(177, 173, 194);
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+}
+.img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-box img{
+    height: 450px;
+    width: 450px;
+}
+/* ----------short info */
+.P-name{
+    margin: 0px 0px 0px 40px;
+}
+.PInfo{
+    width: 60%;
+}
+.price{
+    display: flex;
+    align-items: baseline;
+}
+.discount{
+    color: green;
+    font-size: x-large;
+    margin-left: 10px;
+}
+.mrp{
+    color: gray;
+
+}
+.PHighlight{
+    margin: 40px 0px 0px 20px;
+    display: grid;
+    grid-row: auto;
+}
+.PHighlight h1{
+    margin-left: 40px;
+}
+.d1{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+.d1 h2{
+   color: rgb(8, 8, 8); 
+}
+.d1 p{
+    color: gray;
+}
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+/* ---------contact */
+.contact{
+    background: rgb(22, 196, 54);
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+
+}
+/* .cont-box{
+    display: flex;
+    justify-content: center;
+} */
+.contact h2{
+    color: rgb(8, 7, 7);
+    margin: 10px;
+    padding: 10px;
+}
+
+
+/* ---------------------------------------------------------location--- */
+.location{
+    display: flex;
+    overflow: hidden;
+    padding:20px;
+    background: white;
+    margin: 0px 3% 0% 3%;
+
+}
+/* ------------------------------------------------------------------------more details */
+.more-details{
+    /* display: flex; */
+    overflow: hidden;
+    padding: 20px;
+    background: white;
+    border: 2px solid gray;
+    border-radius: 22px 64px;
+    margin: 0px 3% 2% 3%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    /* justify-content: space-around; */
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+    background: white;
+}
+ul li{
+    margin: 3% 10%;
+    font-size: 20px;
+    color: gray; 
+    display: flex;
+    justify-content: space-around;
+}
+
+ul li span{
+    width: 50%;
+}
+.static{
+    font-weight: bolder;
+    color: rgb(26, 26, 26);
+}
+button{
+  width: 90%;
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+.All-details h1{
+    color: rgb(8, 7, 7);
+    margin: 10px;
+    padding: 10px;
+}
+/* -------------------------------------------------------------review and rattiong------------------ */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    background-color: #333;
+  }
+  
+  footer ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  footer ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  /* -------------------------------------arvind */
+ 
+
+  nav{
+    display:flex;
+    position: fixed;
+    align-items: center;
+    justify-content:space-between;
+    padding:20px 7%;
+    background: linear-gradient(rgb(0 0 0 / 76%),rgb(0 0 0 / 51%));
+    /* background: linear-gradient(rgb(10, 127, 244),rgb(18, 81, 255)); */
+    top: 0%;
+    overflow: hidden;
+    width: 100%;
+    
+}
+
+.logo{
+    width: 135px;
+    height: 40px;
+    cursor: pointer;
+}
+.nav_links li{
+    display: inline-block;
+    margin: 10px 30px;
+    list-style: none;
+}
+.nav_links li a{
+    text-decoration: none;
+    color: white;
+}
+.registre_btn{
+    background: white;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}

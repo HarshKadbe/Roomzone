@@ -1,0 +1,117 @@
+
+
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/ProfileStyle.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/Style_PRegister.css' %}">
+
+	<style>
+
+        .navbar{
+            scroll-behavior: smooth;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 7%;
+            background-color: #484747;
+            position: sticky;
+            top: 0%;
+            overflow: hidden;
+            width: 84vw;
+            margin-bottom: 4px;
+            z-index: 1;
+        }
+        .logo{
+            width: 135px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .nav_links{
+            background: transparent;
+        }
+        .nav_links li{
+            display: inline-block;
+            margin: 10px 30px;
+            list-style: none;
+           
+        }
+        .nav_links li a{
+            text-decoration: none;
+            color: white;
+        }
+        .registre_btn{
+            background: white;
+            color: black;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+	{% include 'navbar.html' %}
+	
+	<div class="container">
+		
+			<section>
+				<div class="Profile-image">
+					<img src="{{profile.imageURL}}" alt="">
+					<ul>
+						<a href="{% url 'user-profile' %}"><li>Personal details</li></a>
+						<a href="{% url 'user-property' %}"><li>your property</li></a>
+						<li style="color: blue;">Add more</li>
+						<a href="{% url 'logout' %}" class="lg"><li>Logout</li></a>
+					</ul>
+				</div>
+			</section>
+			
+		</hr>
+		<!--personal details -->
+			<section class="box cont">
+				
+				<div class="details">  
+					<section class="R-form">
+						
+						<form  method="POST" action="">
+                            {% csrf_token %}
+                            {% for field in form %}
+
+							<label for="name">{{field.label}}:</label>
+							{{field}}
+				
+                            {% endfor %}
+							
+							<div class="submit">
+								<input type="submit" value="submit" />
+							</div>
+						</form>
+					</section>
+				
+				</div>
+			</section>
+			
+		
+	</div>
+</body>
+</html>
+
+
+<!--<form method="POST" action="">
+    {% csrf_token %}
+    {% for field in form %}
+    
+   
+    {{field.label}}
+    {{field}}
+    
+    {% endfor %}
+    <input type="submit" value="Submit" />
+</form>-->

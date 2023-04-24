@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+
+	<link rel="stylesheet" href="{% static 'css/PListStyle.css' %}">
+
+	<style>
+
+        .navbar{
+            scroll-behavior: smooth;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 7%;
+            background-color: #484747;
+            position: sticky;
+            top: 0%;
+            overflow: hidden;
+            width: 84vw;
+            margin-bottom: 4px;
+            z-index: 1;
+            
+        }
+        .logo{
+            width: 135px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .nav_links{
+            background: transparent;
+        }
+        .nav_links li{
+            display: inline-block;
+            margin: 10px 30px;
+            list-style: none;
+           
+        }
+        .nav_links li a{
+            text-decoration: none;
+            color: white;
+        }
+        .registre_btn{
+            background: white;
+            color: black;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+	{% include 'navbar.html' %}
+
+	<div class="container">
+		<!--- Filter Section -->
+		<div class="filter">
+			<h2>Filter By:</h2>
+			<div class="Ftype">
+				<label for="category">Category:</label>
+				
+					
+				
+					{% for category in categories %}
+						<a href="{% url 'filter-page' category_id=category.id %}">{{ category.name }}</a>
+					{% endfor %}
+			
+			
+				
+			</div>
+			
+		
+		</div>
+		<hr>
+
+		<!-- Product List Section -->
+		<div class="right">
+			
+			
+			<div class="product-list">
+				{% for product in products %}
+				<div class="product-item">
+					<img src="{{product.imageURL}}" alt="Product 1" class="product-img">
+					<a href="{% url 'product-description' product.id %}" ><h2 class="product-name">{{product.property_name}}</h2></a>
+					<div class="product-price">${{product.Rent}}</div>
+					<div class="product-category">{{product.profile.name}}</div>
+				</div>		
+				{% endfor %}	
+			</div>
+			 
+			<!---pagignation -->
+			{% if page_obj.has_other_pages %}
+			<div class="pagination">
+
+				
+				{%if page_obj.has_previous %}
+					<a href="?page={{page_obj.previous_page_number}}" >Prev</a>
+				{% endif %}
+
+				<a href="?page={{page}}" class="active">{{page_obj.number}}</a>
+				
+				
+				{%if page_obj.has_next %}
+					<a href="?page={{ page_obj.next_page_number }}">Next</a>
+				{% endif %}
+			</div>		
+			{% endif %}	  
+		</div>
+	</div>
+
+
+
+
+
+
+	<footer>
+		<p>&copy; 2023 Sample Footer. All rights reserved.</p>
+		  <ul>
+			<li><a href="#">Terms of Use</a></li>
+			<li><a href="#">Privacy Policy</a></li>
+			<li><a href="#">Contact Us</a></li>
+		  </ul>	
+	</footer>
+</body>
+</html>

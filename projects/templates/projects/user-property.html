@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+	<section>
+		<div class="Profile-image">
+			<img src="{{profile.imageURL}}" alt="">
+			<ul style="display: flex; flex-direction: column; justify-content:space-between ;height: 73%;">
+				<div>
+					<a href="{% url 'user-profile' %}"><li>Personal details</li></a>
+					<li style="color: blue;">your property</li>
+					<a href="{% url 'list-property' %}"><li>Add more</li></a>
+				</div>
+			</ul>
+		</div>
+		
+	</section>
+	
+</hr>
+<div class="right">
+	<div class="product-list">
+		{% for product in products %}
+		<div class="product-details">
+			<a href="{% url 'product-description' product.id %}"><img src="{{product.imageURL}}" alt="Product Image"></a>
+			<div class="dt">
+				<a href="{% url 'product-description' product.id %}">
+					<h2>{{product.property_name}}</h2>
+					<p>Owner: {{product.profile.name}} </p>
+					<p>Description of the product</p>
+					<br>
+					<ul>
+					<li>Price: ${{product.Rent}}</li>
+					<li>Location:{{product.property_location}}</li>
+					<li>Flat Type:{{product.category.name}}</li>
+					<li>{{product.furnished}}</li>
+					</ul>
+					
+				</a>
+		  </div>
+		</div>
+		{% endfor %}
+		</a>
+		
+	</div>
+</div>
+
+
+</div>
+
+{% endblock content %}

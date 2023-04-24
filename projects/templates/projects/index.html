@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG room </title>
+    <script src="{% static 'js/Home.js'%}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_homepage.css'%}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+</head>
+<body >
+    
+    <nav class="navbar">
+        <img src="{% static 'images/roomzone.jpg'%}" class="logo" alt="logo">
+        <ul class="nav_links"> 
+            <li><a href="{% url 'list-property' %}">List Your Property</a></li>
+            <li><a href="{% url 'user-profile' %}">Account</a></li>
+        </ul>
+        {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}" class="registre_btn">Logout</a>
+        {% else %}
+        <a href="{% url 'login' %}" class="registre_btn">Login/Register</a>
+        {% endif %}
+    </nav>
+    <div class="main">        
+            <section >  
+                 <img src="{% static 'images/header.jpg'%}" alt="">
+            <div class="header">
+                <div class="container" >
+                    <h1>Home is where love resides, Memories are created, Friends always belongs and laughter nerver end.</h1>
+                </div>
+            </div>
+            </section>
+            <div class="inde-3">
+                <div class="container-2">
+                    <div class="text-box">
+                        <h1>Sell or Rent your property</h1>
+                        <h2>Register to Post your property for <b>Free</b></h2>
+                        <a href="{% url 'list-property' %}" class="textbutton">Post your property Now</a>
+                    </div>
+                    <div class="image-box">
+                        <img src="{% static 'images/header2.jpg'%}" alt="">
+                    </div>
+                </div>
+                <div class="blue">
+                    <div class="hh">
+                        <h1>Find Your Dream Home:</h1><h2>Choose from a Wide Range of 1BHK, 2BHK, and 3BHK Flats Available on Our Website!"</h2>
+                    </div>
+                    <div class="b-choise">
+                        <a href="{% url 'filter-page' category_id=1 %}"><div class="bhk1">
+                            <h2>1 BHK</h2>
+                            <p>"Discover Affordable 1BHK Flats for Singles and Small Families on Our Website!"</p>
+                        </div></a>
+                        <a href="{% url 'filter-page' category_id=2 %}"><div class="bhk1">
+                            <h2>2 BHK</h2>
+                            <p>"Spacious and Comfortable 2BHK Flats for Small Families and Couples with Home Offices Available on Our Website!"</p>
+                        </div></a>
+                        <a href="{% url 'filter-page' category_id=3 %}"><div class="bhk1">
+                            <h2>3 BHK</h2>
+                            <p>"Explore the Best 3BHK Flats with Extra Space for Large Families and Guests on Our Website!"</p>
+                        </a></div>
+                    </div>
+                </div>        
+            <!--Footer -->
+                <footer>
+                    <div class="container">
+                    <div class="footer-row">
+                        <div class="footer-col">
+                        <h3>About Us</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        </div>
+                        <div class="footer-col">
+                        <h3>Contact Us</h3>
+                        <p>123 Main Street<br>City, State ZIP<br>Phone: 123-456-7890<br>Email: info@example.com</p>
+                        </div>
+                        <div class="footer-col">
+                        <h3>Connect With Us</h3>
+                        <ul class="social-icons">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                        </div>
+                    </div>
+                    </div>
+                </footer>
+            </div>
+        </div>     
+</body>
+</html>

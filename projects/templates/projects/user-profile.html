@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'css/new.css'%}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+
+        .navbar{
+            scroll-behavior: smooth;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 7%;
+            background-color: #484747;
+            position: sticky;
+            top: 0%;
+            overflow: hidden;
+            width: 84vw;
+            margin-bottom: 4px;
+            z-index: 1;
+            
+        }
+        .logo{
+            width: 135px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .nav_links{
+            background: transparent;
+        }
+        .nav_links li{
+            display: inline-block;
+            margin: 10px 30px;
+            list-style: none;
+           
+        }
+        .nav_links li a{
+            text-decoration: none;
+            color: white;
+        }
+        .registre_btn{
+            background: white;
+            color: black;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+    </style>
+
+</head>
+<body>
+	
+	{% include 'navbar.html' %}
+
+	<div class="container">
+		
+			<section>
+				<div class="Profile-image height">
+					<img src="{{profile.imageURL}}" alt="">
+					<ul style="display: flex; flex-direction: column; justify-content:space-between ;height: 73%;">
+						<div>
+							<li style="color: blue;">Personal details</li>
+							<a href="{% url 'user-property' %}"><li>your property</li></a>
+							<a href="{% url 'list-property' %}"><li>Add more</li></a>
+						</div>
+						<a href="#" class="lg"><li>Logout</li></a>
+					</ul>
+				</div>
+			</section>
+			
+		</hr>
+		<!-- personal details -->
+		<div class="right">
+			<div class="product-list">
+				<div class="product-details">
+					<div class="personal-data">
+						<div class="upload">
+							<img src="{{profile.imageURL}}" width = 100 height = 100 alt="">
+							
+						</div>
+						<div class="persnal-details">
+							<ul>
+								<li><span>Name:</span><span>{{profile.name}}</span></li>
+								<li><span>Username:</span><span>{{profile.username}}</span></li>
+								<li><span>Location:</span><span>{{profile.location}}</span></li>
+								<li><span>Email:</span><span>{{profile.email}}</span></li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+			
+		
+	</div>
+</body>
+</html>

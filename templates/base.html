@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <style>
+
+        .navbar{
+            scroll-behavior: smooth;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 7%;
+            background-color: #484747;
+            position: sticky;
+            top: 0%;
+            overflow: hidden;
+            width: 84vw;
+            margin-bottom: 4px;
+            z-index: 1;
+            
+        }
+        .logo{
+            width: 135px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .nav_links{
+            background: transparent;
+        }
+        .nav_links li{
+            display: inline-block;
+            margin: 10px 30px;
+            list-style: none;
+           
+        }
+        .nav_links li a{
+            text-decoration: none;
+            color: white;
+        }
+        .registre_btn{
+            background: white;
+            color: black;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+    </style>
+
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/ProfileStyle1.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    {% include 'navbar.html' %}
+
+    {% block content %}
+    
+    
+    
+    {% endblock content %}
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="container" >
+  <div class="f-box">
+      <h1>LOGIN HERE</h1>
+     <form action="" method="POST" class="form auth__form">
+      {% csrf_token %}
+      <!-- Input:Email -->
+      <div class="inputfield">
+        <label for="formInput#text">Username</label>
+        <input
+          class="input input--text"
+          id="formInput#text"
+          type="text"
+          name="username"
+          placeholder="Enter your username..."
+        />
+      </div>
+
+      <!-- Input:Password -->
+      <div class="inputfield">
+        <label for="formInput#password">password</label>
+        <input
+          class="input input--password"
+          id="formInput#passowrd"
+          type="password"
+          name="password"
+          placeholder="••••••••"
+        />
+      </div>
+      <div class="botn">
+        <input class="btn btn--sub btn--lg button" type="submit" value="Log In" />
+      </div>
+    </form>
+    <div style="display: flex;justify-content: space-between;">
+        <span><a href="{% url 'reset_password' %}">Forget Password?</a></span>
+      <span><p>Don't have an Account?</p>
+      <a href="{% url 'register' %}">Sign Up</a></span>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+{% endblock content %}
+
+
+

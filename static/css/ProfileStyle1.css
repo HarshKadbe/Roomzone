@@ -1,0 +1,332 @@
+body{
+	background-color: rgba(255, 255, 255, 0.973);
+}
+header{
+	background-color: #333;
+	color: #fff;
+	height: 30px;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	position:fixed;
+    z-index: 99;
+	
+}
+.container{
+	display: flex;
+	flex-direction: row;
+}
+
+h1 {
+	margin: 0;
+}
+.box{
+	padding-top:20px ;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+.details{
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+}
+section {
+	margin-bottom: 30px;
+}
+
+h2 {
+	margin: 0 0 10px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+/* -------------------------profile image---------------- */
+.Profile-image{
+	   background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    border: 2px solid rgb(93, 96, 120);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.Profile-image img{
+	height: 10vh;
+    border: 2px solid #ffffff61;
+    border-radius: 50%;
+    margin: 25px;
+	box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.Profile-image li{
+	cursor: pointer;
+	color: rgb(39, 35, 35);
+	text-align: center;
+	margin:20px 0px 10px 0px ;
+
+}
+.Profile-image a{
+	text-decoration: none;
+}
+.Profile-image li:hover {
+    transform: translateY(1px);
+	/* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; */
+}
+@media screen and (max-width: 768px) {
+	.Profile-image li{
+        flex-basis: 50%;
+    }
+}
+/* ------------------------------------------------------------------------more details */
+.more-details{
+    overflow: hidden;
+    margin: 0px 3% 0% 3%;
+}
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+ul li{
+    margin: 3% 10%;
+    font-size: 20px;
+}
+.height{
+	height: 100%;
+}
+.cont{
+	margin-top: 73px;
+}
+.lg{
+	margin-top: 80px;
+}
+/* PRODUCT REGISTER-------------------------------- */
+.R-form{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 64px 1px 18px 105px;
+    border-radius: 24px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 17px;
+    border: 2px solid gray;
+    
+}
+.Image-uplode{
+    margin-bottom: 40px;
+}
+form {
+    
+    width: 115%;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+input[type="text"], select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 70%;
+
+    
+}
+/* input[type="text"]:hover{
+    border: 2px solid rgb(202, 202, 202);
+} */
+input[type="checkbox"] {
+    margin-right: 10px;
+    
+}
+input[type="submit"] {
+    background-color: #0064ff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #1d09f3;
+}
+.checkbox-group{
+    display: flex;
+    /* justify-content: space-around; */
+}
+.span{
+    width: 250px;
+    margin: 11px 1px;
+}
+span{
+    width: 200px;
+    display: flex;
+}
+#description{
+    width: 70%;
+    height: 200px;
+}
+.submit{
+    display: flex;
+    width: 100%;
+    /* justify-content: center; */
+    margin: 36px 4px 41px 3px;
+}
+.submit input{
+    width: 27%;
+    border-radius: 15px;
+    height: 47px;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+
+/* ---------------------------my home----------------- */
+.right{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-direction: row;
+    margin-top: 100px;
+}
+hr{
+    margin-left: 7rem;
+}
+.product-list {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.product-details {
+    width: 90%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 10px 10px ;
+    margin-block-end: 50px;
+    text-align:justify;
+    font-family: Arial, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }  
+  .product-details img {
+    max-width: 400px;
+    height:350px;
+    margin: 21px 84px 20px 20px;
+  }
+  .dt{
+    padding:20px ;
+  }
+  .dt a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  .product-details h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .product-details p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .product-details ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .product-details li {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  
+  .product-details p:last-of-type {
+    margin-bottom: 0;
+  }
+  /* -----------------------------------profile page----------------- */
+  
+.upload{
+    width: 100px;
+    position: relative;
+    margin: 1px 1px 57px 37%;
+  }
+  
+  .upload img{
+    border-radius: 50%;
+    height: auto;
+    width: auto;
+    border: 6px solid #eaeaea;
+  }
+  
+  .upload .round{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #00B4FF;
+    width: 32px;
+    height: 32px;
+    line-height: 33px;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .upload .round input[type = "file"]{
+    position: absolute;
+    transform: scale(2);
+    opacity: 0;
+  }
+  
+  input[type=file]::-webkit-file-upload-button{
+      cursor: pointer;
+  }
+.personal-data{
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px 10px;
+    margin-block-end: 50px;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+  }
+ .persnal-details ul li{
+     display: flex;
+     justify-content: center;
+     font-size: 24px;
+  } 
+  .persnal-details ul li span{
+    width: 30%;
+  }
+  .persnal-details ul li input{
+    background-color: #207fff;
+    width: 127px;
+    margin: 23px 22px 3px 1px;
+    height: 37px;
+    border: gray;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+  }
+

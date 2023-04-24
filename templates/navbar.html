@@ -1,0 +1,18 @@
+{% load static %}
+
+
+
+<nav class="navbar">
+    <a href="{% url 'index' %}"><img src="{% static 'images/roomzone.jpg'%}" class="logo" alt="logo"></a>
+    <ul class="nav_links"> 
+        <li><a href="{% url 'list-property' %}">List Your Property</a></li>
+        <li><a href="{% url 'user-profile' %}">Account</a></li>
+    
+    </ul>
+    {% if request.user.is_authenticated %}
+    <a href="{% url 'logout' %}" class="registre_btn">Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}" class="registre_btn">Login/Register</a>
+    {% endif %}
+
+</nav>
